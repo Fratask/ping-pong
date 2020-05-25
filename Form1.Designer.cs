@@ -62,7 +62,7 @@ namespace ping_pong_app_solution
             // ball
             // 
             this.ball.Image = global::ping_pong_app_solution.Properties.Resources.ball;
-            this.ball.Location = new System.Drawing.Point(190, 193);
+            this.ball.Location = new System.Drawing.Point(178, 101);
             this.ball.Name = "ball";
             this.ball.Size = new System.Drawing.Size(10, 10);
             this.ball.TabIndex = 4;
@@ -76,6 +76,7 @@ namespace ping_pong_app_solution
             this.plate2.Size = new System.Drawing.Size(11, 45);
             this.plate2.TabIndex = 3;
             this.plate2.TabStop = false;
+            this.plate2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.plate2_MouseMove);
             // 
             // plate1
             // 
