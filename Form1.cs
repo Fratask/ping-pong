@@ -79,8 +79,9 @@ namespace ping_pong_app_solution {
             return new Point(x, y);
         }
 
-        private void plate2_MouseMove(object sender, MouseEventArgs e) {
-                plate2.Location = new Point(e.X, e.Y);
+        private void plate2_MouseMove(object sender, MouseEventArgs e) { 
+            plate2.Location = new Point(plate2.Location.X + e.X, plate2.Location.Y + e.Y);
+            
         }
     }
 }
