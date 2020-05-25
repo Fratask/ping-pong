@@ -1,4 +1,6 @@
-﻿namespace ping_pong_app_solution
+﻿using System;
+
+namespace ping_pong_app_solution
 {
     partial class Form1
     {
@@ -26,13 +28,14 @@
         /// Требуемый метод для поддержки конструктора — не изменяйте 
         /// содержимое этого метода с помощью редактора кода.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             this.score1 = new System.Windows.Forms.Label();
             this.score2 = new System.Windows.Forms.Label();
             this.ball = new System.Windows.Forms.PictureBox();
             this.plate2 = new System.Windows.Forms.PictureBox();
             this.plate1 = new System.Windows.Forms.PictureBox();
+            this.tickTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ball)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plate2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plate1)).BeginInit();
@@ -59,7 +62,7 @@
             // ball
             // 
             this.ball.Image = global::ping_pong_app_solution.Properties.Resources.ball;
-            this.ball.Location = new System.Drawing.Point(190, 40);
+            this.ball.Location = new System.Drawing.Point(190, 193);
             this.ball.Name = "ball";
             this.ball.Size = new System.Drawing.Size(10, 10);
             this.ball.TabIndex = 4;
@@ -82,6 +85,12 @@
             this.plate1.Size = new System.Drawing.Size(11, 45);
             this.plate1.TabIndex = 2;
             this.plate1.TabStop = false;
+            // 
+            // tickTimer
+            // 
+            this.tickTimer.Enabled = true;
+            this.tickTimer.Interval = 10;
+            this.tickTimer.Tick += new System.EventHandler(this.tickTimer_Tick);
             // 
             // Form1
             // 
@@ -114,6 +123,7 @@
         private System.Windows.Forms.PictureBox plate1;
         private System.Windows.Forms.PictureBox plate2;
         private System.Windows.Forms.PictureBox ball;
+        private System.Windows.Forms.Timer tickTimer;
     }
 }
 
