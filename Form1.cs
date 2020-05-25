@@ -16,5 +16,12 @@ namespace ping_pong_app_solution
         {
             InitializeComponent();
         }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e) {
+            if (e.Location.X > 150) {
+                plate2.Location = new Point(e.X, e.Y);
+            }
+
+        }
     }
 }

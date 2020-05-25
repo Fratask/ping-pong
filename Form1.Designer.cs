@@ -41,7 +41,7 @@
             // score1
             // 
             this.score1.AutoSize = true;
-            this.score1.Location = new System.Drawing.Point(12, 9);
+            this.score1.Location = new System.Drawing.Point(10, 10);
             this.score1.Name = "score1";
             this.score1.Size = new System.Drawing.Size(16, 17);
             this.score1.TabIndex = 0;
@@ -50,7 +50,7 @@
             // score2
             // 
             this.score2.AutoSize = true;
-            this.score2.Location = new System.Drawing.Point(318, 9);
+            this.score2.Location = new System.Drawing.Point(360, 10);
             this.score2.Name = "score2";
             this.score2.Size = new System.Drawing.Size(16, 17);
             this.score2.TabIndex = 1;
@@ -59,7 +59,7 @@
             // ball
             // 
             this.ball.Image = global::ping_pong_app_solution.Properties.Resources.ball;
-            this.ball.Location = new System.Drawing.Point(195, 145);
+            this.ball.Location = new System.Drawing.Point(190, 40);
             this.ball.Name = "ball";
             this.ball.Size = new System.Drawing.Size(10, 10);
             this.ball.TabIndex = 4;
@@ -93,10 +93,12 @@
             this.Controls.Add(this.plate1);
             this.Controls.Add(this.score2);
             this.Controls.Add(this.score1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.ball)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.plate2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.plate1)).EndInit();
